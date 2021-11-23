@@ -1,0 +1,13 @@
+.tf-surface {
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+.tf-draw-area {
+    display: flex;
+    justify-content: center;
+}
+
+.visor {
+    width: 100vw !important;
+}
