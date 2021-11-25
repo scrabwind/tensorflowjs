@@ -1,4 +1,3 @@
-import dotenv from 'dotenv'
 import * as tfvis from '@tensorflow/tfjs-vis'
 
 import getData from './CarsMpgPredict/getData'
@@ -8,7 +7,6 @@ import convertToTensor from './CarsMpgPredict/convertToTensor'
 import trainModel from './CarsMpgPredict/trainModel'
 import testModel from './CarsMpgPredict/testModel'
 
-dotenv.config()
 async function run(): Promise<void> {
   tfvis.visor().toggleFullScreen()
   const data = await getData()
