@@ -2,11 +2,19 @@ const path = require('path');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-    entry: './src/index.ts',
+    entry: {
+        index: './src/index.ts',
+        convertToTensor: './src/CarsMpgPredict/convertToTensor.ts',
+        createModel: './src/CarsMpgPredict/createModel.ts',
+        getData: './src/CarsMpgPredict/getData.ts',
+        runScatterPlot: './src/CarsMpgPredict/runScatterPlot.ts',
+        testModel: './src/CarsMpgPredict/testModel.ts',
+        trainModel: './src/CarsMpgPredict/trainModel.ts',
+    },
     devtool: 'inline-source-map',
     mode: 'production',
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
     module: {
@@ -23,5 +31,11 @@ module.exports = {
     },
     plugins: [
         new Dotenv({ path: './.env' })
-    ]
+    ],
+
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        },
+    },
 };
