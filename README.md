@@ -1,7 +1,7 @@
-# typescript-eslint-prettier-airbnb-boilerplate
-Basic boiler plate for typescript eslint prettier airbnb stack
-
-
-# ENV
-WIDTH=
+# Tensorflowjs
+Simple tensorflowjs project
+## Env
+WIDTH= \
 HEIGHT=
+## Resources
+Project based on [Tensorflowjs guide](https://codelabs.developers.google.com/codelabs/tfjs-training-regression/index.html#0)
